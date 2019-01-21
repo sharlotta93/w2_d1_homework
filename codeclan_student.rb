@@ -8,4 +8,8 @@ class Student
     @cohort_number = cohort_number
   end
 
+  def chatty_student
+    return "I can talk!"
+  end
+
 end

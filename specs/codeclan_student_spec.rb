@@ -26,5 +26,9 @@ class TestStudent < MiniTest::Test
     assert_equal('G12', @student.cohort_number())
   end
 
+  def test_check_if_student_talks
+    result = @student.chatty_student()
+    assert_equal('I can talk!', result)
+  end
 
 end
