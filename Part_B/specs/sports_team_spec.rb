@@ -40,4 +40,8 @@ class TestTeam < MiniTest::Test
     assert_equal(false, result)
   end
 
+  def test_add_points_after_win
+    result = @Team.register_point("win")
+    assert_equal(1, result)
+  end
 end
