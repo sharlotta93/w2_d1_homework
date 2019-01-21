@@ -20,10 +20,10 @@ class TestTeam < MiniTest::Test
     assert_equal("Jack The Ripper", @Team.coach())
   end
 
-  # def test_change_coach_name
-  #   @team.coach = 'Not a killer'
-  #   assert_equal('Not a killer', @team.coach())
-  # end
+  def test_change_coach_name
+    @Team.coach = 'Not a killer'
+    assert_equal('Not a killer', @Team.coach())
+  end
 
   # def test_add_new_palyer
   #   assert_equal(5, @team.player().length)
