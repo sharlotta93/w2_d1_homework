@@ -19,6 +19,8 @@ def return_rental_info(title)
   return_book_information(title)[:rental_details]
 end
 
-
+def add_new_book(new_title)
+  @books.push(new_title)
+end
 
 end

@@ -57,9 +57,13 @@ def test_return_rental_info
     date: "01/4/19"
    }
 
-
   result = @my_library.return_rental_info("devil_wears_prada")
   assert_equal(book_to_test, result)
+end
+
+def test_add_new_book
+  @my_library.add_new_book("Jackie")
+  assert_equal(4, @books.length)
 end
 
 end
