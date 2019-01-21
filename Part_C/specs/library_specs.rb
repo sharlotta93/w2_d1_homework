@@ -66,4 +66,15 @@ def test_add_new_book
   assert_equal(4, @books.length)
 end
 
+def test_change_details
+    testbook = @my_library.books[1]
+    # testbook[:title] = "devil_wears_prada"
+    # testbook[:student_name] = 'Alice'
+    # testbook[:date] = "03/4/19"
+    @my_library.change_details("lord_of_the_flies", "Alice", "03/4/19")
+    assert_equal("lord_of_the_flies", testbook[:title])
+    assert_equal("Alice", testbook[:student_name])
+    assert_equal("03/4/19", testbook[:date])
+end
+
 end
