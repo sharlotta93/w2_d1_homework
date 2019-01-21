@@ -10,11 +10,14 @@ attr_reader :books
 def return_book_information(title)
    for book in @books
      if book[:title] == title
-       return book 
+       return book
      end
    end
 end
 
+def return_rental_info(title)
+  return_book_information(title)[:rental_details]
+end
 
 
 

@@ -38,8 +38,7 @@ def test_get_the_book
 end
 
 def test_return_book_information
-
-  book_to_test = {
+   book_to_test = {
     title: "devil_wears_prada",
     rental_details: {
      student_name: "Jack",
@@ -48,6 +47,18 @@ def test_return_book_information
   }
 
   result = @my_library.return_book_information("devil_wears_prada")
+  assert_equal(book_to_test, result)
+end
+
+def test_return_rental_info
+
+  book_to_test = {
+    student_name: "Jack",
+    date: "01/4/19"
+   }
+
+
+  result = @my_library.return_rental_info("devil_wears_prada")
   assert_equal(book_to_test, result)
 end
 
