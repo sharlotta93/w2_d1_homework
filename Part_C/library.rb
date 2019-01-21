@@ -1,15 +1,15 @@
 class Library
 
-  def initialize(title, student_name, date)
-    @title = title
-    @student_name = student_name
-    @date = date
+attr_reader :books
+
+  def initialize(books)
+    @books = books
   end
 
 
-def get_the_book
-
-end
+# def get_the_book
+#    @books[:title]
+# end
 
 
 

@@ -28,12 +28,14 @@ def setup
       }
     }
   ]
+
+  @my_library = Library.new(@books)
 end
 
 def test_get_the_book
-  assert_equal()
+  result = @my_library.books
+  assert_equal(3, result.length)
 end
-
 
 
 
