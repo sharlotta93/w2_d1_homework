@@ -7,9 +7,13 @@ attr_reader :books
   end
 
 
-# def get_the_book
-#    @books[:title]
-# end
+def return_book_information(title)
+   for book in @books
+     if book[:title] == title
+       return book 
+     end
+   end
+end
 
 
 
