@@ -9,8 +9,19 @@ def initialize(team_name, players, coach)
   @coach = coach
 end
 
-# def add_new_player(name)
-#   players << name
-# end
+def add_new_player(name)
+  @players << name
+end
+
+def check_name(name)
+  for person in @players
+    if person == name
+      return true
+    end
+  end
+  return false
+end
+
+
 
 end

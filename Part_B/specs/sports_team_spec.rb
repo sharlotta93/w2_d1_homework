@@ -25,8 +25,19 @@ class TestTeam < MiniTest::Test
     assert_equal('Not a killer', @Team.coach())
   end
 
-  # def test_add_new_palyer
-  #   assert_equal(5, @team.player().length)
-  # end
+  def test_add_new_player
+    result = @Team.add_new_player("Andrea")
+    assert_equal(5, result.length)
+  end
+
+  def test_check_if_player_exists__true
+    result = @Team.check_name("Tina")
+    assert_equal(true, result)
+  end
+
+  def test_check_if_player_exists__false
+    result = @Team.check_name("Jackie")
+    assert_equal(false, result)
+  end
 
 end
